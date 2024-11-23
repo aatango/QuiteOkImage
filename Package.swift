@@ -11,7 +11,12 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "QuiteOkImage"),
+      name: "Cqoi"
+    ),
+    .target(
+      name: "QuiteOkImage",
+      dependencies: ["Cqoi"]
+    ),
     .testTarget(
       name: "QuiteOkImageTests",
       dependencies: ["QuiteOkImage"]
