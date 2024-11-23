@@ -1,0 +1,21 @@
+repos:
+- repo: 'https://github.com/pre-commit/pre-commit-hooks'
+  rev: 'v4.5.0'
+  hooks:
+  - id: 'no-commit-to-branch'
+    fail_fast: true
+  - id: 'check-case-conflict'
+  - id: 'check-merge-conflict'
+    args: ['--assume-in-merge']
+  - id: 'end-of-file-fixer'
+  - id: 'mixed-line-ending'
+  - id: 'trailing-whitespace'
+
+- repo: 'local'
+  hooks:
+  - id: 'swift-test'
+    name: 'swift test'
+    entry: 'swift test'
+    language: 'system'
+    always_run: true
+    pass_filenames: false
